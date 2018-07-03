@@ -8,7 +8,7 @@ require('./models/User');
 require('./services/passport');
 const authRoutes = require('./routes/authRoutes');
 
-mongoose.connect(keys.mongoURL);
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
