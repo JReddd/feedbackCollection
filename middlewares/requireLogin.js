@@ -1,7 +1,7 @@
-module.exports = (req, res, nest) => {
+module.exports = (req, res, next) => {
     if (!req.user){
-        return res.status(401).send("You need to log in first!");
+        return res.status(401).send({error: "You need to log in first!"});
     }
 
-    nest();
+    next();
 };
