@@ -6,6 +6,8 @@ module.exports = app => {
     }));
 
     app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
+
+        window.a = req;
         res.redirect('/surveys');
     });
 
